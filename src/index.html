@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+  <link rel="stylesheet" type="text/css" href="./main.css">
+
+  <title>Frontend Mentor | Tip calculator app</title>
+</head>
+
+<body>
+  <div class="container">
+    <img class="logo" src="../images/logo.svg" alt="logo of webiste">
+    <div class="pay-box">
+      <div class="calc-tip">
+        <div class="bill">
+          <label>Bill</label>
+          <img src="../images/icon-dollar.svg" alt="dollar icon">
+          <input id="bill" type="text" placeholder="0" name="bill">
+        </div>
+        <ul class="select-tip">
+          <li>
+            <h1>Select Tip %</h1>
+            <ul class="tips">
+              <li onclick="getValueTip(11  , this) ">5%</li>
+              <li onclick="getValueTip(10 , this)">10%</li>
+              <li onclick="getValueTip(15 , this)">15%</li>
+              <li onclick="getValueTip(25 , this)">25%</li>
+              <li onclick="getValueTip(50 , this)">50%</li>
+              <li class="custom-tip">
+                <input id="customTip" type="text" name="CustomTip" placeholder="Custom">
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <div class="number-people">
+          <label>Number of People <span class="error " id="error-message">Can't be zero</span></label>
+          <img src="../images/icon-person.svg" alt="person icon">
+          <input id="numberPeople" name="numberOfPeople" type="text" placeholder="0">
+        </div>
+      </div>
+      <div class="show-tip">
+        <div class="tip-amount">
+          <p>
+            Tip Amount
+            <span>/ person</span>
+          </p>
+          <strong id="tip">$0</strong>
+        </div>
+
+        <div class="total">
+          <p>
+            Total
+            <span>/ person</span>
+          </p>
+          <strong id="total">$0</strong>
+        </div>
+
+        <button id="reset">RESET </button>
+      </div>
+    </div>
+  </div>
+
+  <script src="./main.js"></script>
+</body>
+
+</html>
